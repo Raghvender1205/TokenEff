@@ -5,12 +5,14 @@ from tokeneff.formatters.toon_formatter import ToonFormatter
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Token Efficient Data Converter')
+    parser = argparse.ArgumentParser(description="Token Efficient Data Converter")
     parser.add_argument("--input", required=True, help="Input file")
-    parser.add_argument("--format", default="json", help="Input format (json, csv, yaml)")
+    parser.add_argument(
+        "--format", default="json", help="Input format (json, csv, yaml)"
+    )
     args = parser.parse_args()
 
-    with open(args.input, 'r') as f:
+    with open(args.input, "r") as f:
         raw_data = f.read()
 
     # TODO: Select converter dynamically
