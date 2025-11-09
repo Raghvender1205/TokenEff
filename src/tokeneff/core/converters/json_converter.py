@@ -2,6 +2,7 @@ import json
 from tokeneff.core.base import BaseConverter
 from tokeneff.core.models import ConversionInput
 
+
 class JsonConverter(BaseConverter):
     """Converts JSON data into normalized python dict"""
 
